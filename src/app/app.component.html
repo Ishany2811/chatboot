@@ -1,0 +1,150 @@
+<div class="siaguard-theme">
+  <div class="grid-overlay"></div>
+
+  <nav class="navbar">
+    <div class="brand">
+      <div class="logo-hex">SG</div>
+      <div class="brand-text">
+        <span class="main">SIAGUARD</span>
+        <span class="sub">INTELLIGENCE UNIT</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <div class="system-status">
+        <span class="pulse-ring"></span>
+        <span class="label">CORE_ACTIVE</span>
+      </div>
+      <button class="btn-terminal" (click)="goToUpta()">UPTA_ACCESS</button>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-container">
+      <section class="content">
+        <div class="headline-group">
+          <span class="pre-title">DEFENSA PERIMETRAL HÍBRIDA</span>
+          <h1>Neutralización de Amenazas en <span class="highlight">Tiempo Real</span></h1>
+          <p>SiaGuard integra protocolos de ciberseguridad avanzada con vigilancia neuronal. Monitoreo UTM constante para infraestructuras críticas.</p>
+        </div>
+
+        <div class="action-group">
+          <button class="btn-primary" (click)="toggleChat()">DESPLEGAR ASISTENTE IA</button>
+          <div class="node-info">
+            <span class="node-id">NODE_AR_04</span>
+            <span class="node-status">ENCRIPCIÓN_AES-256</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="visual">
+        <div class="ui-frame">
+          <div class="corner top-left"></div>
+          <div class="corner top-right"></div>
+          <div class="corner bottom-left"></div>
+          <div class="corner bottom-right"></div>
+
+          <div class="data-stream">
+            <div class="stream-item">SCAN_LAT: 10.2294</div>
+            <div class="stream-item">SCAN_LON: -67.4772</div>
+            <div class="stream-item">PACKET_LOSS: 0.00%</div>
+          </div>
+
+          <div class="image-wrapper">
+            <div class="scan-bar"></div>
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" alt="Cybersecurity Core">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="chat-wrapper" [class.is-open]="chatOpen">
+    
+    <div class="chat-window">
+      <header class="chat-header">
+        <div class="header-overlay"></div>
+        
+        <button class="btn-settings" (click)="showConfig = !showConfig" title="Configurar Enlace Core">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.44C14.43,2.21 14.23,2.05 14,2.05H10C9.77,2.05 9.57,2.21 9.53,2.44L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,11.35 4.57,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.44C14.43,2.21 14.23,2.05 14,2.05H10C9.77,2.05 9.57,2.21 9.53,2.44L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.88L9.53,21.56C9.57,21.79 9.77,21.95 10,21.95H14C14.23,21.95 14.43,21.79 14.47,21.56L14.86,18.88C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
+        </button>
+  
+        <div class="user-profile">
+          <div class="avatar-container">
+            <div class="avatar-ring"></div>
+            <div class="avatar">AI</div>
+          </div>
+          <div class="info">
+            <span class="name">SIAGUARD_NEURAL_LINK</span>
+            <div class="status-group">
+              <span class="status-dot"></span>
+              <span class="status-text">ENLACE COLAB ACTIVO</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="btn-close" (click)="chatOpen = false">
+          <span></span><span></span>
+        </button>
+  
+        <div class="config-panel" *ngIf="showConfig">
+          <div class="config-header">CONFIG_TUNNEL_URL</div>
+          <div class="config-body">
+            <input [(ngModel)]="apiUrl" placeholder="https://tu-url-colab.loca.lt/ask" spellcheck="false">
+            <button (click)="saveApiConfig()">ACTUALIZAR</button>
+          </div>
+          <small>Establece la conexión con el motor de IA externo.</small>
+        </div>
+      </header>
+  
+      <main class="chat-body" #chatScrollContainer>
+        <div *ngFor="let msg of messages" [ngClass]="msg.sender" class="msg-group">
+          <div class="msg-meta">
+            <span class="sender-id">{{ msg.sender === 'bot' ? 'SEC_CORE' : 'ADMIN_USR' }}</span>
+            <span class="timestamp">[{{ msg.timestamp | date:'HH:mm:ss' }}]</span>
+          </div>
+          <div class="msg-bubble">
+            <div class="text">{{ msg.text }}</div>
+            <div class="corner-accents"></div>
+          </div>
+        </div>
+
+        <div *ngIf="loading" class="bot msg-group typing">
+          <div class="typing-indicator">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </main>
+
+      <footer class="chat-footer">
+        <div class="input-wrapper">
+          <span class="prompt">></span>
+          <input [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="EJECUTAR CONSULTA..." spellcheck="false">
+        </div>
+        <button class="btn-send" (click)="sendMessage()" [disabled]="!userInput.trim() || loading">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+        </button>
+      </footer>
+    </div>
+    
+    <button class="chat-fab" (click)="chatOpen = !chatOpen" [class.is-active]="chatOpen">
+      <div class="fab-wrapper">
+        <div class="fab-scanner"></div>
+        <div class="fab-border-glow"></div>
+        <div class="icon-container">
+          <span class="icon-main">
+            <svg *ngIf="!chatOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span *ngIf="chatOpen" class="close-icon">×</span>
+          </span>
+          <span class="label-tech">SIA_CHAT</span>
+        </div>
+        <div class="signal-bars">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
